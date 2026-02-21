@@ -7,56 +7,66 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#f4f6fa;overflow-x:hidden;}
 
-body{
-  background:#f3f5f9;
-}
-
-/* HEADER */
+/* ================= HEADER ================= */
 header{
-  background:linear-gradient(90deg,#071c3f,#0a2d66);
-  padding:20px 8%;
+  position:relative;
+  background:linear-gradient(90deg,#0b2a59,#0d3b82);
+  padding:25px 8%;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  border-bottom-left-radius:60px;
-  border-bottom-right-radius:60px;
+  border-bottom-left-radius:80px;
+}
+
+header::after{
+  content:'';
+  position:absolute;
+  right:0;
+  top:0;
+  width:280px;
+  height:100%;
+  background:linear-gradient(135deg,#f7c85d,#e0a93c);
+  border-bottom-left-radius:100px;
 }
 
 .logo{
   color:#fff;
   font-size:22px;
   font-weight:700;
+  z-index:2;
+}
+
+nav{
+  z-index:2;
 }
 
 nav a{
   color:#fff;
+  margin:0 18px;
   text-decoration:none;
-  margin:0 15px;
   font-weight:500;
 }
 
 .get-started{
-  background:linear-gradient(90deg,#f6c667,#d4a43b);
+  background:linear-gradient(90deg,#f7c85d,#e0a93c);
   padding:10px 25px;
-  border-radius:10px;
+  border-radius:8px;
   font-weight:600;
   color:#000;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .hero{
+  position:relative;
+  padding:100px 8%;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:80px 8%;
-  background:linear-gradient(rgba(7,28,63,.9),rgba(7,28,63,.9)),
+  background:
+  linear-gradient(rgba(8,28,65,.85),rgba(8,28,65,.85)),
   url('https://images.unsplash.com/photo-1554224155-1696413565d3');
   background-size:cover;
   background-position:center;
@@ -64,16 +74,17 @@ nav a{
 }
 
 .hero-left{
-  width:60%;
+  width:58%;
 }
 
 .hero-left h1{
-  font-size:48px;
+  font-size:54px;
   font-weight:800;
+  line-height:1.2;
 }
 
 .hero-left h1 span{
-  color:#f6c667;
+  color:#f7c85d;
 }
 
 .hero-left p{
@@ -84,86 +95,109 @@ nav a{
 .consult-btn{
   margin-top:30px;
   display:inline-block;
-  padding:15px 35px;
-  background:linear-gradient(90deg,#0e5bb7,#0a2d66);
+  padding:18px 45px;
+  background:linear-gradient(90deg,#0e5bb7,#09316d);
   border-radius:50px;
-  font-size:20px;
+  font-size:22px;
   font-weight:600;
   color:#fff;
   text-decoration:none;
-  border:2px solid #f6c667;
+  border:2px solid #f7c85d;
+  box-shadow:0 10px 25px rgba(0,0,0,.4);
 }
 
 .secure{
   margin-top:20px;
   font-weight:600;
-  color:#f6c667;
+  color:#f7c85d;
 }
 
-/* FORM BOX */
+/* ================= FORM ================= */
 .form-box{
-  background:#0a2d66;
-  padding:30px;
-  width:350px;
-  border-radius:15px;
-  box-shadow:0 10px 40px rgba(0,0,0,.4);
+  background:#0d3b82;
+  padding:35px;
+  width:380px;
+  border-radius:20px;
+  box-shadow:0 20px 60px rgba(0,0,0,.6);
 }
 
 .form-box h3{
-  color:#fff;
-  margin-bottom:20px;
   font-size:22px;
+  margin-bottom:20px;
+}
+
+.form-box span{
+  color:#f7c85d;
 }
 
 .form-box input,
 .form-box select{
   width:100%;
-  padding:12px;
+  padding:14px;
   margin-bottom:15px;
   border:none;
-  border-radius:5px;
+  border-radius:6px;
 }
 
 .submit-btn{
   width:100%;
-  padding:14px;
-  background:linear-gradient(90deg,#f6c667,#d4a43b);
+  padding:15px;
+  background:linear-gradient(90deg,#f7c85d,#e0a93c);
   border:none;
+  border-radius:10px;
   font-size:18px;
-  font-weight:600;
-  border-radius:8px;
+  font-weight:700;
 }
 
-/* SERVICES */
+/* ================= SERVICES ================= */
 .services{
-  padding:60px 8%;
+  padding:70px 8%;
   text-align:center;
 }
 
 .services h2{
-  font-size:32px;
-  margin-bottom:40px;
+  font-size:36px;
+  position:relative;
+  margin-bottom:50px;
 }
+
+.services h2::before,
+.services h2::after{
+  content:'';
+  position:absolute;
+  width:80px;
+  height:3px;
+  background:#e0a93c;
+  top:50%;
+}
+
+.services h2::before{left:calc(50% - 160px);}
+.services h2::after{right:calc(50% - 160px);}
 
 .service-grid{
   display:flex;
-  gap:20px;
   justify-content:center;
+  gap:25px;
   flex-wrap:wrap;
 }
 
 .card{
   background:#fff;
-  width:220px;
-  border-radius:15px;
-  box-shadow:0 8px 25px rgba(0,0,0,.1);
+  width:230px;
+  border-radius:20px;
+  box-shadow:0 15px 35px rgba(0,0,0,.15);
   overflow:hidden;
   padding-bottom:20px;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
 }
 
 .card img{
   width:100%;
-  height:140px;
+  height:150px;
   object-fit:cover;
 }
 
@@ -172,19 +206,19 @@ nav a{
 }
 
 .card a{
-  background:linear-gradient(90deg,#f6c667,#d4a43b);
-  padding:8px 20px;
-  border-radius:8px;
+  background:linear-gradient(90deg,#f7c85d,#e0a93c);
+  padding:10px 25px;
+  border-radius:10px;
   text-decoration:none;
   color:#000;
   font-weight:600;
 }
 
-/* BOTTOM STRIP */
+/* ================= CTA STRIP ================= */
 .bottom-strip{
-  background:#071c3f;
+  background:linear-gradient(90deg,#071c3f,#0d3b82);
   color:#fff;
-  padding:30px 8%;
+  padding:40px 8%;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -193,17 +227,19 @@ nav a{
 
 .features{
   display:flex;
-  gap:30px;
+  gap:35px;
+  font-weight:500;
 }
 
 .cta-large{
-  background:linear-gradient(90deg,#f6c667,#d4a43b);
-  padding:15px 40px;
+  background:linear-gradient(90deg,#f7c85d,#e0a93c);
+  padding:18px 55px;
   border-radius:50px;
-  font-size:20px;
+  font-size:22px;
   font-weight:700;
   color:#000;
   text-decoration:none;
+  box-shadow:0 10px 30px rgba(0,0,0,.4);
 }
 
 footer{
@@ -214,13 +250,8 @@ footer{
 }
 
 @media(max-width:992px){
-  .hero{
-    flex-direction:column;
-  }
-  .hero-left{
-    width:100%;
-    margin-bottom:40px;
-  }
+  .hero{flex-direction:column;}
+  .hero-left{width:100%;margin-bottom:40px;}
 }
 </style>
 </head>
@@ -247,7 +278,7 @@ footer{
 </div>
 
 <div class="form-box">
-<h3>Request a <span style="color:#f6c667;">Free Quote</span></h3>
+<h3>Request a <span>Free Quote</span></h3>
 <input type="text" placeholder="Full Name">
 <input type="email" placeholder="Email Address">
 <input type="text" placeholder="Phone Number">
