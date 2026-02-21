@@ -3,122 +3,191 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Elite Financial Solutions | Grow With Confidence</title>
+<title>Elite Financial Solutions</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --navy:#0a1f44;
+  --navy:#0b1f44;
   --gold:#f5b942;
   --blue:#1e3c72;
-  --purple:#6a11cb;
-  --light:#f4f6f9;
+  --light:#f4f6fa;
   --white:#ffffff;
 }
 
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:var(--light);color:#222;}
+body{background:#f2f4f8;color:#222;}
 
 header{
-  background:linear-gradient(90deg,var(--blue),var(--purple));
-  color:#fff;padding:20px 5%;
+  background:linear-gradient(90deg,#0b1f44,#1e3c72);
+  color:#fff;
+  padding:20px 5%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
-nav{display:flex;justify-content:space-between;align-items:center;}
-nav ul{list-style:none;display:flex;gap:20px;}
-nav a{color:#fff;text-decoration:none;font-weight:500;}
+header h2{font-weight:700;}
 
-.hero{
-  background:linear-gradient(rgba(10,31,68,0.85),rgba(106,17,203,0.85)),
-  url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c');
-  background-size:cover;background-position:center;
-  color:#fff;padding:120px 5%;text-align:center;
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:25px;
 }
 
-.hero h1{font-size:42px;margin-bottom:20px;}
-.hero p{font-size:18px;margin-bottom:30px;}
+nav a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:500;
+}
 
-.btn{
+.btn-gold{
   background:var(--gold);
-  color:var(--navy);
-  padding:12px 25px;
+  color:#000;
+  padding:10px 20px;
+  border-radius:6px;
   text-decoration:none;
   font-weight:600;
-  border-radius:4px;
-  display:inline-block;
-  margin-top:10px;
 }
 
-.section{
+.hero{
+  background:linear-gradient(rgba(11,31,68,0.85),rgba(30,60,114,0.85)),
+  url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c');
+  background-size:cover;
+  background-position:center;
+  padding:100px 5%;
+  color:#fff;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+
+.hero-left{
+  flex:1;
+  min-width:300px;
+}
+
+.hero-left h1{
+  font-size:42px;
+  margin-bottom:20px;
+}
+
+.hero-left p{
+  font-size:18px;
+  margin-bottom:25px;
+}
+
+.hero-form{
+  background:#fff;
+  color:#000;
+  padding:30px;
+  border-radius:10px;
+  width:350px;
+  box-shadow:0 15px 30px rgba(0,0,0,0.2);
+}
+
+.hero-form h3{
+  margin-bottom:20px;
+  color:#0b1f44;
+}
+
+input,select{
+  width:100%;
+  padding:12px;
+  margin-bottom:15px;
+  border-radius:6px;
+  border:1px solid #ccc;
+}
+
+.hero-form button{
+  width:100%;
+  padding:12px;
+  background:var(--gold);
+  border:none;
+  font-weight:600;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.services{
   padding:70px 5%;
+  text-align:center;
+  background:#fff;
 }
 
-.services-grid{
+.services h2{
+  margin-bottom:40px;
+  color:#0b1f44;
+}
+
+.service-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
-  margin-top:40px;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:25px;
 }
 
 .card{
-  position:relative;
-  color:#fff;
-  padding:30px;
+  background:#fff;
   border-radius:10px;
   overflow:hidden;
-  background-size:cover;
-  background-position:center;
-  min-height:260px;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition:0.3s;
 }
 
-.card::before{
-  content:'';
-  position:absolute;
-  top:0;left:0;right:0;bottom:0;
-  background:rgba(0,0,0,0.65);
+.card:hover{transform:translateY(-5px);}
+
+.card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
 }
 
-.card h3,
-.card p,
-.card a{
-  position:relative;
-  z-index:2;
+.card-body{
+  padding:20px;
 }
 
-.card h3{margin-bottom:10px;}
+.card-body h3{
+  margin-bottom:10px;
+  color:#1e3c72;
+}
 
-.card a{
+.card-body a{
+  display:inline-block;
+  margin-top:10px;
+  padding:8px 18px;
   background:var(--gold);
   color:#000;
-  padding:8px 18px;
-  border-radius:4px;
   text-decoration:none;
+  border-radius:5px;
   font-weight:600;
-  width:max-content;
 }
 
-.cta-section{
-  background:linear-gradient(90deg,#1e3c72,#2a5298);
+.cta-bar{
+  background:linear-gradient(90deg,#0b1f44,#1e3c72);
   color:#fff;
-  text-align:center;
-  padding:80px 5%;
+  padding:40px 5%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.cta-bar h2{
+  margin-bottom:10px;
 }
 
 footer{
-  background:#0a1f44;
+  background:#0b1f44;
   color:#fff;
   padding:40px 5%;
+  text-align:center;
   font-size:14px;
 }
 
 @media(max-width:768px){
-.hero h1{font-size:28px;}
-nav ul{flex-direction:column;gap:10px;}
+  .hero{flex-direction:column;}
+  .hero-form{margin-top:30px;width:100%;}
 }
 </style>
 </head>
@@ -126,70 +195,91 @@ nav ul{flex-direction:column;gap:10px;}
 <body>
 
 <header>
-<nav>
 <h2>Elite Financial Solutions</h2>
+<nav>
 <ul>
-<li><a href="#services">Services</a></li>
-<li><a href="#contact">Contact</a></li>
+<li><a href="#">Home</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact</a></li>
 </ul>
 </nav>
+<a href="#" class="btn-gold">Get Started</a>
 </header>
 
 <section class="hero">
-<h1>Smart Financial Solutions for Individuals & Businesses</h1>
-<p>Credit • Insurance • Business Funding • Tax Relief</p>
-<a href="#contact" class="btn">Get Free Consultation</a>
+<div class="hero-left">
+<h1>Trusted Financial & Business Solutions</h1>
+<p>Credit Repair • Insurance • Funding • Tax Relief • Business Growth</p>
+<a href="#" class="btn-gold">Get Free Consultation</a>
+</div>
+
+<div class="hero-form">
+<h3>Request a Free Quote</h3>
+<input type="text" placeholder="Full Name">
+<input type="email" placeholder="Email Address">
+<input type="tel" placeholder="Phone Number">
+<select>
+<option>Select Service</option>
+<option>Credit Repair</option>
+<option>Insurance</option>
+<option>Business Funding</option>
+<option>Tax Relief</option>
+</select>
+<button>Submit Request</button>
+</div>
 </section>
 
-<section class="section" id="services">
-<h2 style="text-align:center;margin-bottom:20px;">Our Services</h2>
+<section class="services">
+<h2>Our Services</h2>
 
-<div class="services-grid">
+<div class="service-grid">
 
-<div class="card" style="background-image:url('https://images.unsplash.com/photo-1565514020179-026b92b2d4e0');">
-<h3>Credit Monitoring & Repair</h3>
-<p>Improve and monitor your credit with expert guidance.</p>
-<a href="#contact">Click Here</a>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1565514020179-026b92b2d4e0">
+<div class="card-body">
+<h3>Credit Repair</h3>
+<p>Boost your score with expert support.</p>
+<a href="#">Click Here</a>
+</div>
 </div>
 
-<div class="card" style="background-image:url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e');">
-<h3>Insurance Assistance</h3>
-<p>Affordable health and auto insurance options.</p>
-<a href="#contact">Click Here</a>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e">
+<div class="card-body">
+<h3>Insurance</h3>
+<p>Affordable health & auto coverage.</p>
+<a href="#">Click Here</a>
+</div>
 </div>
 
-<div class="card" style="background-image:url('https://images.unsplash.com/photo-1507679799987-c73779587ccf');">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf">
+<div class="card-body">
 <h3>Business Funding</h3>
-<p>Access working capital and startup resources.</p>
-<a href="#contact">Click Here</a>
+<p>Access fast working capital.</p>
+<a href="#">Click Here</a>
+</div>
 </div>
 
-<div class="card" style="background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85');">
-<h3>Tax Relief & Senior Services</h3>
-<p>Professional support tailored to your needs.</p>
-<a href="#contact">Click Here</a>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85">
+<div class="card-body">
+<h3>Tax Relief</h3>
+<p>Reduce tax burden effectively.</p>
+<a href="#">Click Here</a>
+</div>
 </div>
 
 </div>
 </section>
 
-<section class="cta-section">
-<h2>Ready to Improve Your Financial Future?</h2>
-<p>Speak with one of our advisors today.</p>
-<a href="#contact" class="btn">Check Eligibility Now</a>
-</section>
-
-<section class="section" id="contact">
-<h2 style="text-align:center;margin-bottom:30px;">Request a Call Back</h2>
-
-<div style="max-width:500px;margin:auto;">
-<form>
-<input type="text" placeholder="Full Name" required style="width:100%;padding:12px;margin-bottom:15px;">
-<input type="email" placeholder="Email Address" required style="width:100%;padding:12px;margin-bottom:15px;">
-<input type="tel" placeholder="Phone Number" required style="width:100%;padding:12px;margin-bottom:15px;">
-<button class="btn" type="submit">Submit</button>
-</form>
+<section class="cta-bar">
+<div>
+<h2>Get Started Today!</h2>
+<p>Trusted Experts • Secure Process • 24/7 Support</p>
 </div>
+<a href="#" class="btn-gold">Contact Now</a>
 </section>
 
 <footer>
