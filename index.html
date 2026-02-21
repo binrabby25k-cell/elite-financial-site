@@ -4,190 +4,174 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Elite Financial Solutions</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --navy:#0b1f44;
-  --gold:#f5b942;
-  --blue:#1e3c72;
-  --light:#f4f6fa;
+  --navy:#0a1f44;
+  --gold1:#d4af37;
+  --gold2:#f6d365;
+  --light:#f4f6f9;
   --white:#ffffff;
 }
-
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:#f2f4f8;color:#222;}
+body{background:#f4f6f9;color:#222;}
 
+/* HEADER */
 header{
-  background:linear-gradient(90deg,#0b1f44,#1e3c72);
+  background:var(--navy);
   color:#fff;
-  padding:20px 5%;
+  padding:20px 8%;
+  border-bottom-left-radius:50px;
+  border-bottom-right-radius:50px;
+}
+nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
 }
-
-header h2{font-weight:700;}
-
-nav ul{
-  list-style:none;
-  display:flex;
-  gap:25px;
-}
-
+nav h2{font-weight:700;}
 nav a{
-  color:#fff;
-  text-decoration:none;
-  font-weight:500;
-}
-
-.btn-gold{
-  background:var(--gold);
-  color:#000;
+  background:linear-gradient(90deg,var(--gold1),var(--gold2));
   padding:10px 20px;
-  border-radius:6px;
+  color:#000;
   text-decoration:none;
   font-weight:600;
+  border-radius:30px;
 }
 
+/* HERO */
 .hero{
-  background:linear-gradient(rgba(11,31,68,0.85),rgba(30,60,114,0.85)),
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+  padding:80px 8%;
+  background:linear-gradient(rgba(10,31,68,0.85),rgba(10,31,68,0.85)),
   url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c');
   background-size:cover;
   background-position:center;
-  padding:100px 5%;
   color:#fff;
-  display:flex;
-  justify-content:space-between;
-  flex-wrap:wrap;
 }
 
-.hero-left{
+.hero-text{
   flex:1;
-  min-width:300px;
+  min-width:280px;
 }
-
-.hero-left h1{
+.hero-text h1{
   font-size:42px;
   margin-bottom:20px;
 }
-
-.hero-left p{
+.hero-text p{
   font-size:18px;
-  margin-bottom:25px;
+  margin-bottom:30px;
+}
+.hero-text a{
+  background:linear-gradient(90deg,var(--gold1),var(--gold2));
+  padding:12px 30px;
+  color:#000;
+  text-decoration:none;
+  font-weight:600;
+  border-radius:30px;
 }
 
-.hero-form{
+/* FORM BOX */
+.form-box{
   background:#fff;
   color:#000;
   padding:30px;
   border-radius:10px;
-  width:350px;
-  box-shadow:0 15px 30px rgba(0,0,0,0.2);
+  width:320px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
 }
-
-.hero-form h3{
-  margin-bottom:20px;
-  color:#0b1f44;
-}
-
-input,select{
-  width:100%;
-  padding:12px;
+.form-box h3{
   margin-bottom:15px;
-  border-radius:6px;
-  border:1px solid #ccc;
+  color:var(--navy);
 }
-
-.hero-form button{
+.form-box input, .form-box select{
+  width:100%;
+  padding:10px;
+  margin-bottom:12px;
+  border:1px solid #ccc;
+  border-radius:5px;
+}
+.form-box button{
   width:100%;
   padding:12px;
-  background:var(--gold);
+  background:linear-gradient(90deg,var(--gold1),var(--gold2));
   border:none;
   font-weight:600;
-  border-radius:6px;
+  border-radius:30px;
   cursor:pointer;
 }
 
+/* SERVICES */
 .services{
-  padding:70px 5%;
+  padding:70px 8%;
   text-align:center;
   background:#fff;
 }
-
 .services h2{
   margin-bottom:40px;
-  color:#0b1f44;
+  color:var(--navy);
 }
-
 .service-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:25px;
 }
-
 .card{
   background:#fff;
   border-radius:10px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.08);
   overflow:hidden;
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
-  transition:0.3s;
 }
-
-.card:hover{transform:translateY(-5px);}
-
 .card img{
   width:100%;
-  height:160px;
+  height:180px;
   object-fit:cover;
 }
-
-.card-body{
-  padding:20px;
+.card h3{
+  margin:15px 0;
+  color:var(--navy);
 }
-
-.card-body h3{
-  margin-bottom:10px;
-  color:#1e3c72;
-}
-
-.card-body a{
+.card a{
   display:inline-block;
-  margin-top:10px;
-  padding:8px 18px;
-  background:var(--gold);
+  margin-bottom:20px;
+  padding:10px 20px;
+  background:linear-gradient(90deg,var(--gold1),var(--gold2));
   color:#000;
   text-decoration:none;
-  border-radius:5px;
+  border-radius:30px;
   font-weight:600;
 }
 
-.cta-bar{
-  background:linear-gradient(90deg,#0b1f44,#1e3c72);
+/* CTA STRIP */
+.cta-strip{
+  background:var(--navy);
   color:#fff;
-  padding:40px 5%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
+  text-align:center;
+  padding:50px 8%;
 }
-
-.cta-bar h2{
-  margin-bottom:10px;
+.cta-strip h2{
+  margin-bottom:20px;
+}
+.cta-strip a{
+  background:linear-gradient(90deg,var(--gold1),var(--gold2));
+  padding:15px 40px;
+  text-decoration:none;
+  color:#000;
+  font-weight:700;
+  border-radius:40px;
+  font-size:18px;
 }
 
 footer{
-  background:#0b1f44;
-  color:#fff;
-  padding:40px 5%;
+  background:#06142d;
+  color:#ccc;
   text-align:center;
+  padding:20px;
   font-size:14px;
-}
-
-@media(max-width:768px){
-  .hero{flex-direction:column;}
-  .hero-form{margin-top:30px;width:100%;}
 }
 </style>
 </head>
@@ -195,26 +179,20 @@ footer{
 <body>
 
 <header>
-<h2>Elite Financial Solutions</h2>
 <nav>
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="#">Services</a></li>
-<li><a href="#">About</a></li>
-<li><a href="#">Contact</a></li>
-</ul>
+<h2>Elite Financial Solutions</h2>
+<a href="#">Get Started</a>
 </nav>
-<a href="#" class="btn-gold">Get Started</a>
 </header>
 
 <section class="hero">
-<div class="hero-left">
+<div class="hero-text">
 <h1>Trusted Financial & Business Solutions</h1>
-<p>Credit Repair • Insurance • Funding • Tax Relief • Business Growth</p>
-<a href="#" class="btn-gold">Get Free Consultation</a>
+<p>Professional credit repair, insurance assistance, funding solutions, and tax relief services across the United States.</p>
+<a href="#">Get a Free Quote</a>
 </div>
 
-<div class="hero-form">
+<div class="form-box">
 <h3>Request a Free Quote</h3>
 <input type="text" placeholder="Full Name">
 <input type="email" placeholder="Email Address">
@@ -225,8 +203,9 @@ footer{
 <option>Insurance</option>
 <option>Business Funding</option>
 <option>Tax Relief</option>
+<option>Senior Services</option>
 </select>
-<button>Submit Request</button>
+<button>Check Eligibility</button>
 </div>
 </section>
 
@@ -236,54 +215,45 @@ footer{
 <div class="service-grid">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1565514020179-026b92b2d4e0">
-<div class="card-body">
+<img src="https://images.unsplash.com/photo-1567427018141-0584cfcbf1b8">
 <h3>Credit Repair</h3>
-<p>Boost your score with expert support.</p>
 <a href="#">Click Here</a>
-</div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e">
-<div class="card-body">
-<h3>Insurance</h3>
-<p>Affordable health & auto coverage.</p>
+<img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5">
+<h3>Insurance Assistance</h3>
 <a href="#">Click Here</a>
-</div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf">
-<div class="card-body">
+<img src="https://images.unsplash.com/photo-1521791136064-7986c2920216">
 <h3>Business Funding</h3>
-<p>Access fast working capital.</p>
 <a href="#">Click Here</a>
-</div>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85">
-<div class="card-body">
 <h3>Tax Relief</h3>
-<p>Reduce tax burden effectively.</p>
 <a href="#">Click Here</a>
 </div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4">
+<h3>Senior Services</h3>
+<a href="#">Click Here</a>
 </div>
 
 </div>
 </section>
 
-<section class="cta-bar">
-<div>
-<h2>Get Started Today!</h2>
-<p>Trusted Experts • Secure Process • 24/7 Support</p>
-</div>
-<a href="#" class="btn-gold">Contact Now</a>
+<section class="cta-strip">
+<h2>Ready to Take Control of Your Financial Future?</h2>
+<a href="#">Get Started Today!</a>
 </section>
 
 <footer>
-<p>© 2026 Elite Financial Solutions | All Rights Reserved</p>
+© 2026 Elite Financial Solutions | All Rights Reserved
 </footer>
 
 </body>
